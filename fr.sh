@@ -22,6 +22,8 @@ git clone https://github.com/ivadim/fruitnanny
 # Generate certificates
 cd /opt/fruitnanny
 openssl req -x509 -sha256 -nodes -days 2650 -newkey rsa:2048 -keyout configuration/ssl/fruitnanny.key -out configuration/ssl/fruitnanny.pem -subj "/C=AU/ST=NSW/L=Sydney/O=MongoDB/OU=root/CN=`hostname -f`"
+sudo cp /opt/fruitnanny/configuration/ssl/fruitnanny.pem /etc/fruitnanny-ssl/
+sudo cp /opt/fruitnanny/configuration/ssl/fruitnanny.key /etc/fruitnanny-ssl/
 
 
 # Install NodeJS
